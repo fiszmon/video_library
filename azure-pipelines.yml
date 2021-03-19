@@ -8,14 +8,6 @@ trigger:
 
 variables:
 
-  # Azure Resource Manager connection created during pipeline creation
-  azureSubscription: 'ac82fd2e-9372-4450-a2f1-f5008f26bcbb'
-
-  # Web app name
-  webAppName: 'wymarzone-filmy'
-
-  # Environment name
-  environmentName: 'wymarzone-filmy'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
