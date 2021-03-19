@@ -8,12 +8,15 @@ dotenv.config();
 import swaggerUi from "swagger-ui-express"
 import swaggerJsdoc from "swagger-jsdoc"
 
+// var YAML = require("yamljs");
+// var swaggerConfig = YAML.load("./api/swagger/swagger.yaml");
+
 const options = {
     definition: {
         openapi: "3.0.1",
         info: {
             title: "Video library API with Swagger",
-            version: "0.0.5 beta",
+            version: "0.0.5 beta", // TODO add to env variable VERSIOn
             description: "This is a simple API application made with Express and documented with Swagger",
         },
         components: {
@@ -24,10 +27,7 @@ const options = {
                     bearerFormat: 'JWT',
                 }
             }
-        },
-        security: [{
-            bearerAuth: []
-        }]
+        }
     },
     apis: ["./routes/routes.js"],
 };

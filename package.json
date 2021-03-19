@@ -1,13 +1,11 @@
 {
     "name": "express-intro",
     "version": "1.0.0",
-    "description": "",
     "main": "app.js",
     "type": "module",
     "scripts": {
         "start": "node app.js"
     },
-    "author": "Adrian Widłak",
     "license": "ISC",
     "dependencies": {
         "bcrypt": "^5.0.0",
