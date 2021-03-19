@@ -38,7 +38,9 @@ stages:
     - script: |
         npm install
       displayName: 'npm install'
-
+    - task: DownloadSecureFile@1
+      inputs:
+        secureFile: '.env'
     - task: ArchiveFiles@2
       displayName: 'Archive files'
       inputs:
