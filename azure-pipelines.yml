@@ -32,9 +32,12 @@ stages:
     steps:
     - task: NodeTool@0
       inputs:
-        versionSpec: '10.x'
+        versionSpec: '14.x'
       displayName: 'Install Node.js'
-
+    - task: DownloadSecureFile@1
+      inputs:
+        secureFile: '.env'
+        
     - script: |
         npm install
       displayName: 'npm install'
@@ -71,6 +74,6 @@ stages:
               azureSubscription: $(azureSubscription)
               appType: webAppLinux
               appName: $(webAppName)
-              runtimeStack: 'NODE|10.10'
+              runtimeStack: 'NODE|14-lts'
               package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
               startUpCommand: 'npm run start'
